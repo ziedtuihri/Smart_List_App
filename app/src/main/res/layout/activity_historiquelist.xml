@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity"
+            android:background="#57B6B0B0"
+            >
+
+            <RelativeLayout
+                android:background="@drawable/side_nav_cont"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/green"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Historic Lists"
+                    android:textSize="40dp"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="left"
+                android:layout_centerVertical="true"
+                android:tint="#FFFFFF"
+                android:src="@drawable/ic_action_navigation_arrow_back"/>
+
+                <ImageView
+                    android:id="@+id/notification"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/notification"
+                    android:tint="@color/white"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    />
+            </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/green"
+        android:layout_below="@+id/green">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/scroll">
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <GridView
+                    android:id="@+id/listoflist"
+                    android:layout_width="match_parent"
+                    android:layout_height="760dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:columnWidth="40dp"
+                    android:divider="#D7FFFFFF"
+                    android:gravity="center"
+                    android:scrollbars="none"
+                    android:horizontalSpacing="20dp"
+                    android:lineSpacingExtra="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:listSelector="@drawable/radius_items"
+                    android:numColumns="3"
+                    android:text="We will give directions \nto the new user"
+                    android:textAlignment="center"
+                    android:textColor="#A1A1A1"
+                    android:textSize="16sp"
+                    android:verticalSpacing="24dp" />
+
+
+
+            </LinearLayout>
+
+
+
+
+            </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+

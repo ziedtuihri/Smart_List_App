@@ -1,0 +1,201 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/side_nav_bar"
+    android:id="@+id/navbar"
+    android:gravity="center_vertical">
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rigth_radius"
+        android:backgroundTint="#E9E7E7"
+        android:searchHintIcon="@color/search_layover_bg"
+        android:layout_gravity="center_vertical"
+        android:elevation="5dp"></SearchView>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/ic_action_voice_search_inverted" />
+    <Button
+        android:id="@+id/addProduct"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#E9E7E7"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/add"
+        android:contextClickable="true"
+        />
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#E9E7E7"
+        android:background="@drawable/scancode"
+        android:contextClickable="true"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="0dp"
+        android:backgroundTint="#E9E7E7"
+        android:contextClickable="true"
+        android:text="FAMILLY"
+        android:textSize="30dp"
+        android:fontFamily="italic"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+
+        />
+
+
+
+
+
+</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hd"
+        android:orientation="vertical"
+        android:background="@drawable/bg"
+        android:layout_below="@+id/navbar"
+        >
+
+
+
+
+
+    <ListView
+        android:id="@+id/listProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#57D7ECE2"
+        android:layout_marginBottom="45dp"
+        >
+    </ListView>
+        <ListView
+            android:id="@+id/listsearsh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7D7ECE2">
+
+        </ListView>
+
+
+        <LinearLayout
+            android:id="@+id/fragment_detail_fab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:background="#E9ECEB"
+            android:textColor="#ffff"
+            android:text="Course"
+            android:orientation="horizontal"
+            android:weightSum="3">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@drawable/radiuoss"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            >
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#C4BEBE"
+                    android:text="0 Product !"
+                    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4CCE8E"
+                android:text="  / Product "
+                android:fontFamily="sans-serif-black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@drawable/radiuoss"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            >
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#C4BEBE"
+                android:text=" PRICE ! "
+                android:fontFamily="sans-serif-black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4CCE8E"
+                android:text="  DT "
+                android:fontFamily="sans-serif-black"
+                />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/radiuoss"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="#4CCE8E"
+                    android:src="@drawable/panier"/>
+                <TextView
+                    android:id="@+id/modecourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#C4BEBE"
+                    android:text=" Mode Course ! "
+                    android:fontFamily="sans-serif-black"
+                    android:contextClickable="true"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+</LinearLayout>
